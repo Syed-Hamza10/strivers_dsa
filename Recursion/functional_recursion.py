@@ -3,6 +3,6 @@ def foo(i):
         return 0 #base case
     return i + foo(i-1)
 
-print(foo(6)) #21
+print(foo(2)) #21
 
 #this is called functional recursion because the calculations happen in the function body and not in the function parameters.
