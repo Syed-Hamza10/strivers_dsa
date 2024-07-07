@@ -4,7 +4,7 @@ def foo():
     global count
     print(count)
     count += 1
-    if count == 1000:
+    if count == 998:
         return
     foo()
 
