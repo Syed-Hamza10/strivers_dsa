@@ -17,3 +17,5 @@ def palindrome(string,idx,length):
     return palindrome(string,idx+1,length)
 
 print(palindrome('MADAM',0,len('MADAM'))) # True
+
+#T.c and S.c = n / 2

@@ -12,3 +12,6 @@ def foo1(i,n):
     print('Hamza')
     foo1(i+1,n)
 foo1(1,5)    
+
+# T.C = O(N)
+# S.C = O(N) we usualyy takes stack space
