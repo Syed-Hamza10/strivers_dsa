@@ -1,6 +1,6 @@
 def brute_force(arr): # NlogN + N
     arr = sorted(arr)
-    largest = max(arr)
+    largest = max(arr) # (N)
     slargest = 0
     n = len(arr)
     for i in range(n-2,0,-1):

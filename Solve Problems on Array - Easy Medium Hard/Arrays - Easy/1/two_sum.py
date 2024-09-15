@@ -3,10 +3,10 @@ def brute(nums, target):
     n = len(nums)
 
     for i in range(n):
-        temp = target - nums[i]
+        required_more = target - nums[i]
 
         for j in range(i + 1, n):
-            if nums[j] == temp:
+            if nums[j] == required_more:
                 ans.extend([i,j])
                 break
     return ans
@@ -14,7 +14,7 @@ def brute(nums, target):
 def optimal(nums, target):
     n = len(nums)
 
-    num_to_index = {}
+    num_to_index = {} #kiya pehle hamne kabhi wo element dekha hai jo required hai?
 
     for i in range(n):
         remaining = target - nums[i] 

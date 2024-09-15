@@ -9,7 +9,7 @@ def brute_force(arr): # NlogN + N
             return ssmallest
     
 
-#print(brute_force([5,5,4,3,2,1]))
+print(brute_force([5,5,4,3,2,1]))
 
 def better(arr): # O(2N) since there are two passes
     smallest = arr[0]
@@ -26,11 +26,11 @@ def better(arr): # O(2N) since there are two passes
             ssmallest = arr[i]
     return ssmallest
 
-#print(better([5,5,4,3,2,1]))
+print(better([5,5,4,3,2,1]))
 
 def optimal(arr): # O(N)
     smallest = arr[0]
-    ssmallest = 1000000
+    ssmallest = float('inf')
     for i in range(1,len(arr)):
         if arr[i] < smallest:
             ssmallest = smallest
