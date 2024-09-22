@@ -1,3 +1,7 @@
+my_list = [0] * 50
+
+global_variabe = 42
+
 def brute(nums):
     nums = sorted(nums)
     n = len(nums)
@@ -36,3 +40,5 @@ def optimal(nums):
     return longest
 
 print(optimal([100,4,200,1,3,2]))
+
+
