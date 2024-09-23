@@ -11,11 +11,15 @@ def foo(matrix):
 foo([[1,2,3],[4,5,6],[7,8,9]])
 
 def shortcut(matrix):
+    
     return zip(*matrix)
-    '''* is called splat operator and it unpacks the rows, gives them separately to zip function'''
+    return list(map(list, zip(*matrix)))
+    return [list(row) for row in zip(*matrix)]
+    ''' * is called splat operator and it unpacks the rows, gives them separately to zip function'''
 
 
 def transpose_of_square_matrix(matrix):
+    '''just swap the vaues above the diagonal with below the diagonal'''
     ROW = len(matrix)
     COL = len(matrix[0])
 
@@ -24,3 +28,8 @@ def transpose_of_square_matrix(matrix):
             matrix[c][r], matrix[r][c] = matrix[r][c], matrix[c][r]
 
     return matrix
+
+a = list(shortcut([[1,2,3],[4,5,6],[7,8,9]])) 
+print([list(i) for i in a])
+
+print(shortcut([[1,2,3],[4,5,6],[7,8,9]]))
