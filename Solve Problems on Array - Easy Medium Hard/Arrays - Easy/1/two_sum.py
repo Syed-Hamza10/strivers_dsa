@@ -25,4 +25,28 @@ def optimal(nums, target):
         num_to_index[nums[i]] = i+1
 
     
-print(optimal([-1,0], -1))
+#print(optimal([-1,0], -1))
+
+def optimal2(nums, target): #if we have to return elements,not index
+    nums.sort()
+    n = len(nums)  
+    ans = []
+
+    i = 0
+    j = n - 1
+
+    while i < j:
+        if nums[i] + nums[j] < target:
+            i += 1
+        elif nums[i] + nums[j] > target:
+            j -= 1
+        else:
+            while i < j and nums[i] == nums[i + 1]:
+                i += 1
+            while i < j and nums[j] == nums[j - 1]:
+                j -= 1
+            ans.extend([nums[i], nums[j]])
+            i += 1
+            j -= 1
+    return ans
+print(optimal2([1,7,2,15], 9))
