@@ -24,5 +24,16 @@ def optimal(nums):
     return i+1, nums 
 
 
-print(removeDuplicates([11,22,33,44,5555,66,66,77,77]))
-print(optimal([11,22,33,44,5555,66,66,77,77]))
+#print(removeDuplicates([11,22,33,44,5555,66,66,77,77]))
+#print(optimal([11,22,33,44,5555,66,66,77,77]))
+
+
+def union(nums1, nums2):
+     
+    for i in nums2:
+        if i not in nums1:
+            nums1.append(i)
+    nums1.sort()
+    return nums1
+
+print(union([1,2,3,4,5], [1,2,3,6,7]))

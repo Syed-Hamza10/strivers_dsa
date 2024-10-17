@@ -28,3 +28,16 @@ def list_comprehension(arr):
     arr = [res.append(x) for x in arr if x not in res]
     return res
 print(list_comprehension([1,2,3,4,5,5]))
+
+def saw_this_on_LC(nums):
+    cur = 0
+    last = None
+    for n in nums:
+        if n == last:
+            continue
+        last = n
+        nums[cur] = n
+        cur += 1
+    return cur
+
+print(saw_this_on_LC([1,1,2,2,3,4,5]))
