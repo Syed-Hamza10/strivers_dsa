@@ -17,4 +17,21 @@ def find_min(nums):
 
 print(find_min([2,1]))
 
+def find_min_striver(nums):
+    '''find the sorted part, update the min variable'''
+    n = len(nums)
+    left, right = 0 , n - 1
+    mini = float('inf')
 
+    while left <= right:
+        mid = left + (right - left) // 2
+
+        if nums[left] <= nums[mid]: # <= if it has only on element like [2,1]
+            mini = min(nums[left], mini)
+            left = mid + 1
+        else:
+            mini = min(nums[mid], mini)
+            right = mid - 1
+
+    return mini
+print(find_min_striver([3,1,2]))
