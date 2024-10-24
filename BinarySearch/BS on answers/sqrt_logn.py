@@ -1,16 +1,15 @@
 def foo(num):
     low = 1
     high = num
-    ans = 0
+    ans = 1
     while low <= high:
         mid = low + (high - low) // 2
-        if mid * mid == num:
+        if mid * mid <= num:
             ans = mid
-            return ans
-        
-        elif mid * mid > num:
-            high = mid - 1
-        else:
             low = mid + 1
-    return high
+        
+        else: #mid * mid > num:
+            high = mid - 1
+        
+    return high #or return ans
 print(foo(17))
