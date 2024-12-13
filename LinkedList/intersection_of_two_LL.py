@@ -5,7 +5,7 @@
 #         self.next = None
 
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+    def getIntersectionNode(self, headA, headB):
         if not headA or not headB:
             return None
         lenA = 0
