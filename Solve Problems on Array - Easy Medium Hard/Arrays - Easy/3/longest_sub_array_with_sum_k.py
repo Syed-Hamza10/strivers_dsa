@@ -1,6 +1,6 @@
 def brute(arr, k):
     n = len(arr)
-
+    
     maxLen = 0
     for i in range(n):
         for j in range(i, n):
@@ -34,4 +34,4 @@ def better(arr, k): #only work for +ves and zeros O(2 * N)
 
 
 
-print(better([2,3,5,1,9], 20))
+print(brute([2,3,5,1,9], 20))
