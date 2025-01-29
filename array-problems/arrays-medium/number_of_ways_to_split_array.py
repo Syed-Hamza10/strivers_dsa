@@ -1,16 +1,16 @@
-def waysToSplitArray(nums) -> int:
-    cur_sum = 0
-    res = 0
+from typing import List
+class Solution:
+    def waysToSplitArray(self, nums: List[int]) -> int:
 
-    for i in range(len(nums) - 1):
-        cur_sum = sum(nums[:i+1])
-        temp = 0
-        for j in range(i + 1, len(nums)):
-            temp += nums[j]
+        total_sum = sum(nums)
+        left_sum = res = 0
+
+        for i in range(len(nums) - 1):
+            left_sum += nums[i]
+            right_sum = total_sum - left_sum
+
+            if left_sum >= right_sum:
+                res += 1
+
         
-        if cur_sum >= temp:
-            res += 1
-    
-    return res
-
-print(waysToSplitArray([10,4,-8,7]))
+        return res
